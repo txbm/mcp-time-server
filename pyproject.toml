@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-time-server"
+version = "0.1.0"
+description = "Model Context Protocol Time Server - A robust timezone-aware time server implementation"
+requires-python = ">=3.9"
+dependencies = [
+    "tzdata",  # Explicit dependency for cross-platform timezone support
+    "asyncio",
+    "aiohttp",
+    "typing_extensions",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-asyncio",
+    "pytest-cov",
+    "black",
+    "mypy",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.mypy]
+strict = true
