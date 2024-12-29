@@ -8,9 +8,9 @@ version = "0.1.0"
 description = "Model Context Protocol Time Server - A robust timezone-aware time server implementation"
 requires-python = ">=3.9"
 dependencies = [
+    "mcp>=0.7.0",
     "tzdata",  # Explicit dependency for cross-platform timezone support
     "asyncio",
-    "aiohttp",
     "typing_extensions",
 ]
 
